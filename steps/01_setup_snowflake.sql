@@ -10,6 +10,7 @@ CREATE OR ALTER WAREHOUSE QUICKSTART_WH
 CREATE OR ALTER DATABASE QUICKSTART_COMMON;
 
 
+
 -- API integration is needed for GitHub integration
 CREATE OR REPLACE API INTEGRATION git_api_integration
   API_PROVIDER = git_https_api
@@ -20,10 +21,11 @@ CREATE OR REPLACE API INTEGRATION git_api_integration
 -- Git repository object is similar to external stage
 CREATE OR REPLACE GIT REPOSITORY quickstart_common.public.quickstart_repo
   API_INTEGRATION = git_api_integration
-  ORIGIN = 'https://github.com/ank-guhe/sfguide-getting-started-with-snowflake-devops.git';
+  ORIGIN = 'https://github.com/ank-guhe/sfguide-getting-started-with-snowflake-devops';
 
 
-CREATE OR ALTER DATABASE QUICKSTART_PROD;
+CREATE OR ALTER DATABASE QUICKSTART_{{environment}}; 
+
 
 
 -- To monitor data pipeline's completion
@@ -45,3 +47,4 @@ CREATE OR ALTER STAGE bronze.raw;
 
 -- Copy file from GitHub to internal stage
 copy files into @bronze.raw from @quickstart_common.public.quickstart_repo/branches/main/data/airport_list.json;
+
