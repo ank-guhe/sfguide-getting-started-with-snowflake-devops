@@ -9,6 +9,7 @@ CREATE OR ALTER WAREHOUSE QUICKSTART_WH
 -- Separate database for git repository
 CREATE OR ALTER DATABASE QUICKSTART_COMMON;
 
+--Added comment to check deployment 
 
 
 -- API integration is needed for GitHub integration
