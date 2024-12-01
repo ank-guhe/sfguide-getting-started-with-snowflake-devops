@@ -1,6 +1,6 @@
 use role accountadmin;
---use schema quickstart_prod.gold;
-use schema quickstart_{{environment}}.gold;
+use schema quickstart_prod.gold;
+--use schema quickstart_{{environment}}.gold;
 
 
 -- declarative target table of pipeline
@@ -16,7 +16,7 @@ create or alter table vacation_spots (
   , aquarium_cnt int
   , zoo_cnt int
   , korean_restaurant_cnt int
-) data_retention_time_in_days = {{retention_time}};
+) data_retention_time_in_days = 1;
 
 
 
