@@ -72,8 +72,8 @@ create or alter task email_notification
         where true
           and punctual_pct >= 50
           and avg_temperature_air_f >= 70
-          and korean_restaurant_cnt > 0
-          and (zoo_cnt > 0 or aquarium_cnt > 0)
+          --and korean_restaurant_cnt > 0
+          --and (zoo_cnt > 0 or aquarium_cnt > 0)
         limit 10);
 
 
