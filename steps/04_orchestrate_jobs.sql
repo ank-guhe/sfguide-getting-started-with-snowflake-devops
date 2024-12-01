@@ -80,7 +80,7 @@ create or alter task email_notification
       if (:options = '[]') then
         CALL SYSTEM$SEND_EMAIL(
             'email_integration',
-            'harnisha.paraye1994@gmail.com', -- INSERT YOUR EMAIL HERE
+            'ankush.guhe@gmail.com', -- INSERT YOUR EMAIL HERE
             'New data successfully processed: No suitable vacation spots found.',
             'The query did not return any results. Consider adjusting your filters.');
       end if;
@@ -93,14 +93,14 @@ create or alter task email_notification
 
       CALL SYSTEM$SEND_EMAIL(
         'email_integration',
-        'harnisha.paraye1994@gmail.com', -- INSERT YOUR EMAIL HERE
+        'ankush.guhe@gmail.com', -- INSERT YOUR EMAIL HERE
         'New data successfully processed: The perfect place for your summer vacation has been found.',
         :response);
     exception
         when EXPRESSION_ERROR then
             CALL SYSTEM$SEND_EMAIL(
             'email_integration',
-            'harnisha.paraye1994@gmail.com', -- INSERT YOUR EMAIL HERE
+            'ankush.guhe@gmail.com', -- INSERT YOUR EMAIL HERE
             'New data successfully processed: Cortex LLM function inaccessible.',
             'It appears that the Cortex LLM functions are not available in your region');
     end;
