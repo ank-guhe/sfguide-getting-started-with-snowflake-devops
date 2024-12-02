@@ -11,6 +11,7 @@ CREATE OR ALTER DATABASE QUICKSTART_COMMON;
 
 --Added comment to check deployment 
 --Updated comment2 to check deployment 
+--Added comment3 to check deployment 
 
 
 -- API integration is needed for GitHub integration
