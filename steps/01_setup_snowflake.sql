@@ -10,7 +10,7 @@ CREATE OR ALTER WAREHOUSE QUICKSTART_WH
 CREATE OR ALTER DATABASE QUICKSTART_COMMON;
 
 --Added comment to check deployment 
---Added comment2 to check deployment 
+--Updated comment2 to check deployment 
 
 
 -- API integration is needed for GitHub integration
