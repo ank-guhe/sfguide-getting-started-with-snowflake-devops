@@ -14,8 +14,8 @@ create or alter table vacation_spots (
   , avg_cloud_cover_pct float
   , precipitation_probability_pct float
   , aquarium_cnt int
-  , zoo_cnt int
-  , korean_restaurant_cnt int
+  --, zoo_cnt int
+  --, korean_restaurant_cnt int
 ) data_retention_time_in_days = 1;
 
 
@@ -40,8 +40,8 @@ create or alter task vacation_spots_update
       , vacation_spots.avg_cloud_cover_pct = harmonized_vacation_spots.avg_cloud_cover_pct
       , vacation_spots.precipitation_probability_pct = harmonized_vacation_spots.precipitation_probability_pct
       , vacation_spots.aquarium_cnt = harmonized_vacation_spots.aquarium_cnt
-      , vacation_spots.zoo_cnt = harmonized_vacation_spots.zoo_cnt
-      , vacation_spots.korean_restaurant_cnt = harmonized_vacation_spots.korean_restaurant_cnt
+      --, vacation_spots.zoo_cnt = harmonized_vacation_spots.zoo_cnt
+      --, vacation_spots.korean_restaurant_cnt = harmonized_vacation_spots.korean_restaurant_cnt
   WHEN NOT MATCHED THEN 
     INSERT VALUES (
         harmonized_vacation_spots.arrival_city
@@ -53,8 +53,8 @@ create or alter task vacation_spots_update
       , harmonized_vacation_spots.avg_cloud_cover_pct
       , harmonized_vacation_spots.precipitation_probability_pct
       , harmonized_vacation_spots.aquarium_cnt
-      , harmonized_vacation_spots.zoo_cnt
-      , harmonized_vacation_spots.korean_restaurant_cnt
+      --, harmonized_vacation_spots.zoo_cnt
+      --, harmonized_vacation_spots.korean_restaurant_cnt
          
     );
 
