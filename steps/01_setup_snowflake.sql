@@ -27,6 +27,7 @@ CREATE OR REPLACE GIT REPOSITORY quickstart_common.public.quickstart_repo
   ORIGIN = 'https://github.com/ank-guhe/sfguide-getting-started-with-snowflake-devops';
 
 
+--CREATE OR ALTER DATABASE QUICKSTART_DEV; 
 CREATE OR ALTER DATABASE QUICKSTART_PROD; 
 
 --new comment
